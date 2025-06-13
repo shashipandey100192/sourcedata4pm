@@ -1,0 +1,35 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+
+.row
+{
+    width: 1200px;
+    height: auto;
+    /* border:1px solid blue; */
+    background-color: aquamarine;
+    display: flex;
+    margin-top:10px;
+}
+.row>section
+{
+    /* border:1px solid red; */
+    padding:10px;
+    flex:1;
+    margin:5px;
+    text-align: center;
+    background-color: rgb(3, 123, 123);
+    color:white;
+}
+.row>section>img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.row>section>p
+{
+    text-align: justify;
+}
