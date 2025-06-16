@@ -1,0 +1,92 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+div
+{
+    width: 1200px;
+    height: 600px;
+    border:1px solid red;
+    margin-top:10px;
+}
+div>h1{
+    text-align: center;
+    font-size: 50px;
+}
+.one
+{
+    /* background-color: orange; */
+     /* background-color: #df9ad0; */
+     background-color: rgb(100,200,50);
+}
+.two
+{
+    /* background:linear-gradient(red,green,orange,blue); */
+    /* background:-webkit-linear-gradient(left,red,green,orange,blue); */
+    background:-webkit-linear-gradient(70deg,red,green,orange,blue);
+    /* background:-webkit-radial-gradient(top right,red,green,orange,blue); */
+}
+
+.third
+{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2l7d5z1fVVXPDtCBdkt8_tLDdJicyASkLfQ&s');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.fourth
+{
+    background:orange url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2l7d5z1fVVXPDtCBdkt8_tLDdJicyASkLfQ&s');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 50% 100%;
+}
+
+.fifth>h1
+{
+    width: 800px;
+    height: 200px;
+    padding:50px;
+    color:white;
+    /* background-color: rgb(106, 232, 251);
+    opacity:0.1; */
+    background-color:rgba(106, 232, 251,0.2);
+    margin-top:100px;
+}
+
+
+.sixth>h1
+{
+    background:linear-gradient(rgba(255,0,0,0),blue);
+}
+#one
+{
+    padding:50px;
+    box-sizing: border-box;
+    columns: 4;
+    text-align: justify;
+    column-rule: 2px dotted gray;
+}
+#one h4
+{
+    font-size: 30px;
+    column-span: all;
+}
+#one p::first-letter
+{
+    color:red;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: arial black;
+}
+#one h4::first-line
+{
+    color:red;
+}
+#one img
+{
+    width: 100%;
+    filter:grayscale(100%);
+}
+
