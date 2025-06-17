@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css');
+    </style>
+    <style>
+
+        .user
+        {
+            padding:10px;
+            width: 300px;
+             transition-duration: 500ms;
+        }
+        .user:hover
+        {
+            width: 800px;
+            background-color: aquamarine;
+            border:none;
+            transition: width;
+            transition-duration: 1s;
+        }
+        .heading
+        {
+            font-size: 30px;
+            animation-name:abc;
+            animation-duration: 200ms;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+
+        @keyframes abc {
+            from{}
+            to{color:red}
+        }
+
+        .box
+        {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            animation:xyz 2s infinite alternate linear;
+        }
+
+        @keyframes xyz {
+            0%{}
+            60%{margin-left: 800px;}
+            90%{margin-left: 400px;margin-top:200px;background-color: red;}
+            100%{left:0px;top:100px}
+        }
+
+
+        .row
+        {
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            font-size: 40px;
+            background-color: aqua;
+            margin-left:300px;
+            /* transform: rotate(30deg); */
+            /* transform: scale(2,2); */
+            /* transform: skew(-20deg); */
+            /* transform: translate(300px,0); */
+            /* transform: rotateY(180deg); */
+            animation:box1 1s infinite linear;
+            transform-origin: top right;
+        }
+
+        @keyframes box1    {
+            from{}
+            to{transform: rotate(360deg);}
+        }
+
+        .myani
+        {
+            color:red;
+            animation:flip 1s infinite;
+            width: 300px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+<input type="text" class="user">
+<input type="button" value="submit">
+<h4 class="heading">this is new update</h4>
+<!-- <div class="box"> logo</div> -->
+
+<div class="row">use of transform</div>
+
+<h1 class="myani">use of css animation lib</h1>
+
+
+
+</body>
+</html>
