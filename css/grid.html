@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        .page
+        {
+            width: 1200px;
+            height: auto;
+            /* border:1px solid red; */
+            display: grid;
+            margin:0 auto;
+            padding:0;
+            grid-template-columns: 400px 400px 400px;
+            grid-template-rows: 80px 300px 300px 70px auto;
+        }
+        .page section
+        {
+            /* border:1px solid blue; */
+            padding:10px;
+            margin:5px;
+        }
+        .page section:nth-child(1),.page section:nth-child(6)
+        {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: azure;
+        }
+        .page section:nth-child(2)
+        {
+            grid-row-start: 2;
+            grid-row-end: 4;
+            background-color: rgb(177, 234, 234);
+        }
+        .page section:nth-child(3)
+        {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            background-color: rgb(130, 240, 240);
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <section>box 1</section>
+    <section>box 2</section>
+    <section>box 3</section>
+    <section>box 4</section>
+    <section>box 5</section>
+    <section>box 6</section>
+    <section>box 7</section>
+    <section>box 8</section>
+    <section>box 9</section>
+    <section>box 10</section>
+</div>
+
+
+    
+</body>
+</html>

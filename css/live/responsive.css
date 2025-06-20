@@ -1,0 +1,43 @@
+
+@media(max-width:1200px)
+{
+    body
+    {
+        background-color: aquamarine;
+    }
+    .page
+    {
+        width: 100%;
+    }
+    .page section
+    {
+        width: 23%;
+    }
+}
+
+
+@media(max-width:900px)
+{
+    body
+    {
+        background-color: rgb(88, 84, 169);
+    }
+    .page section
+    {
+        width: 45%;
+    }
+}
+
+@media(max-width:500px)
+{
+    body
+    {
+        background-color: rgb(167, 167, 167);
+    }
+    .page section
+    {
+        width: 100%;
+    }
+}
+
+

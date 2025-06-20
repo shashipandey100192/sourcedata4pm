@@ -1,0 +1,58 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+.row
+{
+    width: 100%;
+    min-height: 50px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+.row>section
+{
+    flex:1;
+    /* border:1px solid red; */
+    padding:5px;
+}
+.text-r
+{
+text-align: right;
+}
+.icons
+{
+    background-color: #c0c0c0;
+    padding: 10px;
+    border-right: 1px solid gray;
+    border-radius: 5px;
+    color: white;
+    
+}
+.line-h
+{
+    line-height:40px;
+}
+.bg
+{
+    background-color: #f2f2f2;
+}
+.f3
+{
+    flex:3 !important;
+}
+.f2
+{
+    flex:2 !important;
+}
+.f4
+{
+    flex:4 !important;
+}
+.poster
+{
+    background-image: url('https://www.skyweaver.net/images/media/wallpapers/wallpaper1.jpg');
+    background-size: 100% 100%;
+    height: 500px;
+}

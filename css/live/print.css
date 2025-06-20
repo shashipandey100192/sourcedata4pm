@@ -1,0 +1,55 @@
+
+@media print
+{
+    @page
+    {
+        size: A4 portrait;
+    }
+    body
+    {
+        background-color: transparent;
+    }
+    .navbar
+    {
+        display: none;
+    }
+    .page
+    {
+        display: block;
+        width: 100%;
+        border:none;
+       
+    }
+    .page section
+    {
+        width: 100%;
+        border:none;
+         page-break-after: always;
+    }
+    .page img
+    {
+        filter: grayscale(100%);
+    }
+    header,footer
+    {
+        display: block;
+    }
+    header
+    {
+        top:0;
+        z-index: 1500;
+    }
+    footer
+    {
+        bottom: 0;
+    }
+    .watermark
+    {
+        display: block;
+        color:black;
+        z-index: 99;
+        font-size: 100px;
+        opacity: 0.2;
+    }
+
+}
