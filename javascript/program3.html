@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="button" value="submit1" >
+<input type="button" value="submit2">
+<input type="button" value="submit3">
+<input type="button" value="submit4">
+<input type="button" value="submit5">
+<input type="button" value="submit6">
+<input type="button" value="submit7" onclick="abc()">
+<input type="color">
+
+
+
+
+
+<script>
+var allinput = document.getElementsByTagName('input');
+console.log(allinput);
+function abc()
+{
+    alert("welcome");
+}
+
+
+    allinput[0].addEventListener("click",abc);
+
+    allinput[7].addEventListener("input",()=>{
+        document.bgColor = allinput[7].value;
+    })
+
+</script>
+    
+</body>
+</html>
