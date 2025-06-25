@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first
+        {
+            color:red;
+            background-color: orange;
+            padding:10px;
+            text-align: center;
+        }
+        .second
+        {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .third
+        {
+            text-transform: uppercase;
+        }
+        .fourth
+        {
+            font-weight: bolder;
+        }
+
+        .theams
+        {
+            background-color: black;
+            color:white;
+            
+        }
+    </style>
+</head>
+<body>
+<p style="color:red;background-color: aquamarine;">this is paragraph1</p>
+<p>this is paragraph2</p>
+<p>this is paragraph3</p>
+<p>this is paragraph4</p>
+<p>change mode</p>
+<p>this is paragraph6</p>
+<p>this is paragraph7</p>
+<p>this is paragraph8</p>
+<p>this is paragraph9</p>
+<p>this is paragraph10</p>
+
+
+<script>
+
+var jp = document.querySelectorAll('p');
+console.log(jp);
+
+jp[1].addEventListener("click",()=>{
+   jp[1].style.color="red";
+//    jp[1].style.backgroundColor="green";
+});
+
+
+jp[2].addEventListener("click",()=>{
+   jp[2].className="first";
+});
+
+
+jp[3].addEventListener("click",()=>{
+   jp[3].classList.add("first","second","third","fourth");
+});
+
+jp[4].addEventListener("click",()=>{
+    document.querySelector('body').classList.toggle("theams");
+});
+
+
+
+</script>
+
+    
+</body>
+</html>
