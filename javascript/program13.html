@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="enter emp name" id="emp">
+    <select id="opt">
+        <option>select direction</option>
+        <option>left</option>
+        <option>right</option>
+    </select>
+    <hr>
+    <input type="button" value="add emp" onclick="addnewemp()">
+
+    <script>
+        //    var a= [];
+        //    var a= [10,50,"kumar",true,[],{},600];
+        // var a= [[10,20,50,60],[10,20,"kumar",70],[10,20]];
+        // var a = [{name:"kumar",age:20},{name:"rohit",age:10},{}];
+        // var a = new Array();
+        //     a[10]=500;
+        //     a[20]="kumar";
+        //     a[5]="rohit";
+        //     a[25]=true;
+        //    console.log(a); 
+
+
+        var emplist = ["kumar", "ravi", 50, 70];
+        var jopt = document.getElementById('opt');
+
+        function addnewemp() {
+            var jinput = document.getElementById('emp');
+            // emplist.push(jinput.value);
+            //  emplist.unshift(jinput.value);
+            // console.log(emplist);
+            if (jopt.value == "left") {
+                emplist.unshift(jinput.value);
+            }
+            else if (jopt.value == "right") {
+                emplist.push(jinput.value);
+            }
+            else {
+                alert("please select direction to add new employee");
+            }
+            console.log(emplist);
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

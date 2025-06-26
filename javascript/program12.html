@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1></h1>
+
+    <script>
+        function mywatch()
+        {
+        var jh = document.querySelectorAll('h1');
+    var a =new Date();
+        var h = a.getHours();
+        var m = a.getMinutes();
+        var s = a.getSeconds();
+        var jtime = `current Time: ${h}:${m}:${s}`;
+            jh[0].innerHTML=jtime;
+            if(m>=41 && s>=20)
+        {
+            window.location.href="http://google.com";
+        }
+     
+        }
+
+        setInterval("mywatch()",1000);
+
+    </script>
+    
+</body>
+</html>
