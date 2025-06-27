@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+    </style>
+    <style>
+        ul
+        {
+            width:100%;
+            list-style-type: none;
+        }
+        ul li
+        {
+                width:200px;
+                height: 50px;
+                text-align: center;
+                color:white;
+                background-color: rgb(5, 49, 49);
+                margin-left:5px;
+                display: inline-block;
+                line-height: 50px;
+        }
+        ul a
+        {
+            color:white;
+            font-size:20px;
+        }
+        ul i
+        {
+            margin-left:10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="enter emp name" id="emp">
+
+    <select id="opt">
+        <option>select direction</option>
+        <option>left</option>
+        <option>right</option>
+    </select>
+
+    <hr>
+    <input type="button" value="add emp" onclick="addnewemp()">
+     <input type="button" value="delete" onclick="deleteemp()">
+     <input type="button" value="map" onclick="datamaping()">
+     
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+
+<ul class="menu">
+    <li>Home</li>
+    <li>About</li>
+</ul>
+
+
+    <script>
+
+        var emplist = ["kumar", "ravi", 50, 70];
+        var jopt = document.getElementById('opt');
+        var alldiv = document.querySelectorAll('div');
+
+
+        function showdata()
+        {
+            alldiv[0].innerHTML=`Total Array: ${emplist}`;
+            console.log(emplist);
+            alldiv[1].innerHTML=`Count Length: ${emplist.length}`;
+        }
+        showdata();
+
+
+        function addnewemp() {
+            var jinput = document.getElementById('emp');
+            if (jopt.value == "left") {
+                emplist.unshift(jinput.value);
+            }
+            else if (jopt.value == "right") {
+                emplist.push(jinput.value);
+            }
+            else {
+                alert("please select direction to add new employee");
+            }
+            showdata();
+            datamaping();
+        }
+
+        function deleteemp()
+        {
+            if(jopt.value=="left")
+        {
+            emplist.shift();
+        }
+        else if(jopt.value=="right")
+        {
+            emplist.pop();
+        }
+        else
+        {
+            alert("select direction to remove emplist");
+        }
+        showdata();
+        datamaping();
+        }
+
+        function datamaping()
+        {
+            var jmenu = document.querySelectorAll(".menu");
+          var mytemp = emplist.map((m)=>{
+                // return `<li>${m} <i class="fa fa-bars"></i></li>`;
+                return `<li><a href="${m}.html">${m}<i class="fa fa-bars"></i></a></li>`;
+          });
+          jmenu[0].innerHTML=mytemp.join("");
+
+
+        }
+
+        datamaping();
+
+    </script>
+
+</body>
+
+</html>
