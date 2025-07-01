@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul
+        {
+            list-style-type: none;
+        }
+        ul input
+        {
+            padding:8px;
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><input type="text" placeholder="fullname"></li>
+        <li><input type="email" placeholder="email"></li>
+        <li><input type="text" placeholder="phone"></li>
+        <li><input type="password" placeholder="password"></li>
+        <li><input type="button" value="Add"></li>
+    </ul>
+<hr>
+
+<table width="800" align="center" cellspacing="5" cellpadding="5" border="1">
+    <thead>
+        <tr>
+            <th>sno</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone No</th>
+            <th>Pass</th>
+        </tr>
+    </thead>
+    <tbody id="datalist">
+        
+    </tbody>
+</table>
+
+
+
+<script>
+    var users=[];
+var allinput = document.querySelectorAll('input');
+console.log(allinput);
+allinput[4].addEventListener("click",()=>{
+    users.push({fullname:allinput[0].value,
+        email:allinput[1].value,
+        phoneno:allinput[2].value,
+        pass:allinput[3].value
+    });
+    console.log(users);
+    localStorage.setItem("locadata",JSON.stringify(users));
+    sessionStorage.setItem("sessiondata",JSON.stringify(users));
+    getdata();
+});
+
+function getdata()
+{
+    var jtbody = document.getElementById('datalist');
+    var getlocaldata =JSON.parse(localStorage.getItem("locadata"));
+    // console.log(getlocaldata);
+    // console.log(typeof(getlocaldata));
+     
+    var mapdata = getlocaldata.map((d)=>{
+            return  `<tr align="center">
+            <td>sno</td>
+            <td>${d.fullname}</td>
+            <td>${d.email}</td>
+            <td>${d.phoneno}</td>
+            <td>${d.pass}</td>
+        </tr>`;
+    });
+    jtbody.innerHTML=mapdata.join("");
+
+
+}
+getdata();
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

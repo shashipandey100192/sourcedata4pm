@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .page {
+            width: 1200px;
+            height: auto;
+            border: 1px solid red;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .page section {
+            width: 260px;
+            height: auto;
+            border: 1px solid blue;
+            margin: 5px;
+            padding: 5px;
+
+        }
+
+        .page img {
+            width: 100%;
+        }
+
+        .bg {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page"></div>
+
+    <script>
+        function myapidata() {
+            var jpage = document.querySelector('.page');
+            fetch("https://dummyjson.com/products").then((r) => {
+                return r.json();
+            }).then((e) => {
+                var mydata = e.products;
+
+                var mytemp = mydata.map((d) => {
+                    // if (d.id == 5 || d.id==2) {
+                    if (d.id%2==0) {
+                        return ` <section class="bg">
+                            <img src="${d.thumbnail}">
+                            <h2>${d.category}</h2>
+                            <p>${d.description}</p>
+                             </section>`;
+                    }
+                    else {
+                        return ` <section>
+                            <img src="${d.thumbnail}">
+                            <h2>${d.category}</h2>
+                            <p>${d.description}</p>
+                             </section>`;
+
+                    }
+                });
+                jpage.innerHTML = mytemp.join("");
+
+
+            })
+        }
+        myapidata();
+
+
+    </script>
+
+
+
+</body>
+
+</html>
