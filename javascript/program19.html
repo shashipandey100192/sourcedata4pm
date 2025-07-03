@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+        @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Comic+Relief:wght@400;700&family=Concert+One&family=Permanent+Marker&family=Potta+One&display=swap');
+    </style>
+    <style>
+        h1 {
+            font-size: 100px;
+            letter-spacing: 30px;
+            font-family: "Potta One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+            background-image: url('https://c1.wallpaperflare.com/preview/870/79/678/banner-header-graph-paper-squared-paper.jpg');
+            width: 500px;
+            text-align: center;
+        }
+
+        input {
+            padding: 8px 12px;
+            font-size: 30px;
+        }
+        .valid
+        {
+            color:green;
+            font-size: 50px;
+        }
+        .invalid
+        {
+            color:red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1></h1>
+    <hr>
+    <input type="text" placeholder="enter captch">
+    <span>
+        
+    </span>
+   
+
+    <script>
+        function mycap()
+        {
+
+        var a = parseInt((Math.random() + 1) * 4562);
+        console.log(a);
+        var b = document.querySelector("h1");
+        
+
+        var txt;
+            if(a>=8000)
+        {
+            txt = "S";
+        }
+        else if(a>=7000)
+        {
+            txt = "U";
+        }
+        else if(a>=6000)
+        {
+            txt = "Z"
+        }
+        else if(a>=5000)
+        {
+            txt="P";
+        }
+        else
+        {
+            txt="Y"
+        }
+    var mycap;
+
+        if(a>7000)
+        {
+            mycap = a+txt;
+        }
+        else
+        {
+            mycap=txt+a;
+        }
+
+        b.innerHTML = mycap;
+            
+
+        var myinput = document.querySelector("input");
+        myinput.addEventListener("input", () => {
+            var jspan = document.querySelector("span");
+            var c = myinput.value;
+            console.log(c);
+            if (c == mycap) {
+                jspan.innerHTML=`<i class="fa fa-check valid" aria-hidden="true"></i>`;
+                window.location.href = "http://google.com";
+            }
+            else {
+                jspan.innerHTML=` <i class="fa fa-times invalid" aria-hidden="true"></i>`;
+                return false
+            }
+        })
+
+    }
+    mycap();
+    setInterval("mycap()",10000);
+
+    </script>
+
+</body>
+
+</html>
